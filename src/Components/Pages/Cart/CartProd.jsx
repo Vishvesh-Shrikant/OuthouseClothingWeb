@@ -32,7 +32,6 @@ const CartProd = () => {
             <div className=' absolute top-2 right-2 hover:cursor-pointer'>
                 <DeleteOutlineOutlinedIcon/>
             </div>
-            
         </div>
     </>
   )
