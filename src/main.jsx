@@ -1,0 +1,36 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import {Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements} from 'react-router-dom'
+import Home from './Components/Pages/Home/Home.jsx'
+import Shop from './Components/Pages/Shop/Shop.jsx'
+import About from './Components/Pages/About/About.jsx'
+import SignInPage from './Components/Pages/SignIn/SignInPage.jsx'
+import Account from './Components/Pages/Account/Account.jsx'
+import Cart from './Components/Pages/Cart/Cart.jsx'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      
+      <Route>
+        <Route path='/' element={<App/>}>
+          <Route index element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/shop' element={<Shop/>}/>
+          <Route path='/account' element={<Account/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+        </Route>
+        <Route path='/signin' element={<SignInPage/>}/>
+      </Route>
+    </>
+    
+))
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+
+    <RouterProvider router={router}/>
+  </React.StrictMode>,
+)
