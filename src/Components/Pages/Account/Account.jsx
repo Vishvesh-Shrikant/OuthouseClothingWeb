@@ -5,6 +5,10 @@ import account from '../../../assets/account.png'
 import payment from '../../../assets/payment.png'
 import contactus from '../../../assets/contactus.png'
 import ScrollToTop from '../../../ScrollToTop'
+import { Link } from 'react-router-dom'
+
+
+
 
 const Account = () => {
     const [loggedin, setLoggedin] = useState(false)
@@ -13,16 +17,16 @@ const Account = () => {
         <ScrollToTop/>
         <div className='mt-20 px-sectionPadding'>
             <div className='mt-10 text-typography'>
-                {/* ------------------- YOUR ORDERS ------------------ */}
                 <p className='text-4xl font-headings text-black font-semibold'>YOUR ACCOUNT</p>
+                {/* ------------------- YOUR ORDERS ------------------ */}
                 <div className='grid grid-cols-3 justify-between my-10 gap-10 '>
-                  <div className=' px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10'>
+                  <Link to='/account/my-orders' className=' px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10'>
                     <img src={orders} className='h-28 p-2'/>
                     <div className='h-full flex flex-col justify-center items-start py-6 '>
                       <p className='text-xl font-bold'>Your Orders</p>
                       <p className='text-sm '>View, Track and Return your orders here</p>
                     </div>
-                  </div>
+                  </Link>
                   {/* -------------------ACCOUNT DETAILS ------------------ */}
                   <div className='  px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10'>
                     <img src={account} className='h-28 p-2'/>
