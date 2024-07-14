@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import img1 from '../../../assets/trial1.jpg'
 import ScrollToTop from '../../../ScrollToTop.jsx'
-import { useActionData } from 'react-router-dom'
+
 
 const SingleProductDetail = () => {
   const sizes=["XS", "S","M","L", "XL", "XXL"]
