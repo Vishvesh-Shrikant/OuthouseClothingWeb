@@ -20,7 +20,7 @@ const Cart = () => {
                     <p>Your Shopping Bag is Empty.</p>
                     <p className='text-xl font-texts'>Any items added to the bag will be visible here</p>
                     <Link to="/shop" className='flex justify-center items-center mt-3'>
-                        <button className='bg-primary h-12 text-background text-2xl p-2 rounded-sm border border-typography my-3'> Continue Shopping</button>
+                        <button className='bg-primary h-12 text-background text-2xl px-8 py-2 rounded-sm border border-typography my-3'> Continue Shopping</button>
                     </Link>
                 </div>
             )

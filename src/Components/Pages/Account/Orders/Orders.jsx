@@ -22,7 +22,7 @@ const Orders = () => {
                     <p>No orders have been made yet.</p>
                     <p className='text-xl font-texts'>Any orders that you place will be visible here</p>
                     <Link to="/shop" className='flex justify-center items-center'>
-                        <button className='bg-primary h-12 text-background text-2xl p-2 rounded-sm border border-typography my-3'> Continue Shopping</button>
+                        <button className='bg-primary h-12 text-background text-2xl px-8 py-2 rounded-sm border border-typography my-6'> Continue Shopping</button>
                     </Link>
                 </div>
             )

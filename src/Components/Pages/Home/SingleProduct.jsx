@@ -1,11 +1,11 @@
 import React from 'react'
 import trial1 from '../../../assets/trial1.jpg'
 import StarIcon from '@mui/icons-material/Star';
-
+import { Link } from 'react-router-dom'
 const SingleProduct = () => {
   return (
     <>
-        <div className='flex flex-col items-start justify-start rounded-lg border border-typography p-3 my-5 text-typography shadow-sm shadow-gray-600'>
+        <Link to={`/shop/id1`} className='flex flex-col items-start justify-start rounded-lg border border-typography p-3 my-5 text-typography shadow-sm shadow-gray-600'>
             <div className='bg-gray-200 rounded-lg'>
                 <img src={trial1} className='h-full'/>
             </div>
@@ -20,7 +20,7 @@ const SingleProduct = () => {
                     <StarIcon style={{fontSize:"large"}}/>
                   </div>
                 </div>
-        </div>
+        </Link>
     </>
   )
 }

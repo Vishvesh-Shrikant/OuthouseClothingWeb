@@ -10,6 +10,7 @@ import SignInPage from './Components/Pages/SignIn/SignInPage.jsx'
 import Account from './Components/Pages/Account/Account.jsx'
 import Cart from './Components/Pages/Cart/Cart.jsx'
 import Orders from './Components/Pages/Account/Orders/Orders.jsx'
+import SingleProductDetail from './Components/Pages/Shop/SingleProductDetail.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
           <Route path='/account' element={<Account/>}/>
           <Route path='/account/my-orders' element={<Orders/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/shop/:prodID' element={<SingleProductDetail/>}/>
         </Route>
         <Route path='/signin' element={<SignInPage/>}/>
       </Route>
