@@ -1,10 +1,32 @@
 import React, { useState } from 'react'
 import img1 from '../../../assets/trial1.jpg'
 import ScrollToTop from '../../../ScrollToTop.jsx'
+import { NavLink } from 'react-router-dom'
 
 
 const SingleProductDetail = () => {
-  const sizes=["XS", "S","M","L", "XL", "XXL"]
+  const sizes=[
+    {
+      id:1, size:"XS"
+    },
+    {
+      id:2, size:"S"
+    },
+    {
+      id:3, size:"M"
+    },
+    {
+      id:4, size:"L"
+    },
+    {
+      id:5, size:"XL"
+    },
+    {
+      id:6, size:"XXL"
+  }]
+
+  const [selectedSize, setSelectedSize]=useState()
+
   const [quantity, setQuantity]= useState(1)
   const increment=()=>{
     if(quantity==15)
@@ -57,8 +79,8 @@ const SingleProductDetail = () => {
               <div className='grid grid-cols-4 gap-x-10 gap-y-3'>
                 {
                   sizes.map((size)=>(
-                    <div className='flex justify-center items-center text-black border border-typography p-2 cursor-pointer' value={size}>
-                      <p className='font-texts font-semibold text-lg'>{size}</p>
+                    <div className={selectedSize==size.id?'flex justify-center items-center border border-typography p-2 cursor-pointer duration-200 ease-linear bg-primary text-background':'flex justify-center items-center text-black border border-typography p-2 cursor-pointer duration-200 ease-linear'} value={size.size} key={size.id} onClick={()=>{setSelectedSize(size.id)}}>
+                      <p className='font-texts font-semibold text-lg'>{size.size}</p>
                     </div>
                   ))
                 }

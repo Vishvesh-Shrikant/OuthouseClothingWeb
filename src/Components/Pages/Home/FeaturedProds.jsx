@@ -6,16 +6,13 @@ import { Link } from 'react-router-dom'
 const FeaturedProds = () => {
   return (
     <>
-        <div className=' px-sectionPadding p-10 text-typography w-full'>
+        <div className='px-sectionPadding max-md:px-mobileScreenPadding text-typography w-full'>
             <div className='flex flex-col justify-center items-center'>
-                <p className=' font-headings text-5xl'>Featured Products</p>
-                <p className='text-base font-texts my-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus aut</p>
+                <p className=' font-headings text-5xl '>Featured Products</p>
+                <p className='text-base max-mobileL:text-sm font-texts my-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus aut</p>
             </div>
             
-            <div className='grid grid-cols-3 gap-x-6 my-10'>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
+            <div className='grid sm:grid-cols-3 gap-x-6 my-10 max-sm:grid-cols-2 max-mobileL:grid-cols-1'>
                 <SingleProduct/>
                 <SingleProduct/>
                 <SingleProduct/>

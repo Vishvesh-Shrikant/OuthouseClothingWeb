@@ -26,7 +26,8 @@ export default {
         texts:[ "Raleway", "sans-serif"]
       },
       padding:{
-        'sectionPadding':'5rem'
+        'sectionPadding':'5rem',
+        'mobileScreenPadding':'3rem'
       }
     },
   },
