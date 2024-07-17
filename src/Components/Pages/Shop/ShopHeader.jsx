@@ -12,21 +12,21 @@ const [filterBar, setFilterBar] = useState(false)
     setFilterBar(!filterBar)
   }
   return (
-    <div className='mt-20 px-sectionPadding '>
+    <div className='mt-20 px-sectionPadding max-md:px-mobileScreenPadding '>
         {/* SEARCH BAR AND FILTERS */}
-        <div className='flex justify-between items-center py-3 text-typography mt-5'>
-        <div className='flex justify-start items-center cursor-pointer border border-typography py-2 px-4 rounded-md' 
-            onClick={changeSidebar}>
-            <p className='font-semibold font-texts text-xl'>Filters</p>
-            <TuneIcon/>
-        </div>
-        <div className='font-texts rounded-md w-1/3 border border-typography flex justify-between items-center'>
-            <input type="text" placeholder='search shop...' className='border-none outline-none rounded-l-md py-2 pr-6 w-[85%] pl-1'/>
-            <div className='cursor-pointer px-2'>
-              <SearchIcon />
-            </div>
-            
-        </div>
+        <div className='flex justify-between items-center max-sm:flex-col max-sm:items-start py-3 text-typography mt-5'>
+          <div className='flex justify-start items-center cursor-pointer border border-typography py-2 px-4 rounded-md max-sm:my-4' 
+              onClick={changeSidebar}>
+              <p className='font-semibold font-texts text-xl'>Filters</p>
+              <TuneIcon/>
+          </div>
+          <div className='font-texts rounded-md w-1/3 max-sm:w-3/4 max-mobileL:w-full border border-typography flex justify-between items-center'>
+              <input type="text" placeholder='search shop...' className='border-none outline-none rounded-l-md py-2 pr-6 w-[85%] pl-1'/>
+              <div className='cursor-pointer px-2'>
+                <SearchIcon />
+              </div>
+              
+          </div>
         </div>
         {/* SIDEBAR FOR FILTERS */}
         <AnimatePresence>

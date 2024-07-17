@@ -12,7 +12,7 @@ export default {
     extend: {
       screens:{
         'mobileL':"430px",
-        'mobileM':"375px",
+        'mobileM':"385px",
         'mobileS':"320px"
       },
       colors:{

@@ -27,7 +27,7 @@ const Header = () => {
           </div>
 
           {/* -----------FOR WEBSITE LINKS------------ */}
-          <ul className='flex justify-between items-center font-semibold text-lg w-1/2 max-md:w-1/4 max-mobileL:w-2/5'  >
+          <ul className='flex justify-between items-center font-semibold text-lg w-2/5 max-md:w-1/4 max-mobileL:w-2/5'  >
             {/* ======== ADD LINK LOCATIONS TO THE NAVLINKS AND CHANGE COLOUR ======*/}
             <li className='max-md:hidden'>
               <NavLink to='/' className={({isActive})=>`relative transition duration-300 ease-in-out after:transition after:duration-300 after:ease-in-out ${isActive?'after:content-[""] after:w-2/3 after:absolute after:h-[0.13rem] text-primary after:bg-primary after:bottom-0 after:left-0':'hover:after:content-[""] hover:after:w-2/3 hover:after:absolute hover:after:h-[0.13rem] hover:text-primary hover:after:bg-primary hover:after:bottom-0 hover:after:left-0'}`}>

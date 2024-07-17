@@ -6,12 +6,12 @@ import CartProd from './CartProd'
 
 const Cart = () => {
 
-  const [isCartEmpty, setIsCartEmpty] = useState(true)
+  const [isCartEmpty, setIsCartEmpty] = useState(false)
 
   return (
     <>
         <ScrollToTop/>  
-        <div className='mt-20 px-sectionPadding pt-10'>
+        <div className='mt-20 px-sectionPadding max-md:px-mobileScreenPadding pt-10'>
           <div className='flex items-center justify-center align-middle text-5xl font-headings mb-10'>Shopping Bag</div>
           {
             isCartEmpty &&
@@ -29,9 +29,9 @@ const Cart = () => {
             !isCartEmpty &&
             (
               <>
-                <div className='flex justify-between items-start'>
+                <div className='flex justify-between items-start max-md:flex-col'>
                   {/* ----------- SHOPPING CART------------ */}
-                  <div className='w-1/2 '>
+                  <div className='w-3/5 max-[940px]:w-1/2 max-md:w-4/5 max-sm:w-full'>
                     <CartProd/>
                     <CartProd/>
                     <CartProd/>
@@ -40,7 +40,7 @@ const Cart = () => {
                   </div>
 
                     {/* ----------- SUBTOTAL SECTION ------------- */}
-                    <div className='w-2/5 my-3 border border-typography p-6 rounded-sm'>
+                    <div className='w-1/2 max-md:w-4/5 max-sm:w-full my-3 md:ml-6 border border-typography p-6 rounded-sm'>
                       {/* COUPON DISCOUNT SECTION */}
                       <div className='border-b-[1px] border-gray-300 pb-2'>
                         <div className=' flex items-center'>
@@ -73,8 +73,7 @@ const Cart = () => {
                     </div>
                 </div>
               </>
-            )
-          }
+          )}
       </div>
     </>
     

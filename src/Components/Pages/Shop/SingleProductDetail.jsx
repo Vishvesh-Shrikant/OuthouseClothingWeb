@@ -26,7 +26,6 @@ const SingleProductDetail = () => {
   }]
 
   const [selectedSize, setSelectedSize]=useState()
-
   const [quantity, setQuantity]= useState(1)
   const increment=()=>{
     if(quantity==15)
@@ -45,10 +44,10 @@ const SingleProductDetail = () => {
   return (
     <>
       <ScrollToTop/>
-      <div className='w-full mt-20 px-sectionPadding pt-sectionPadding  '>
-        <div className='flex justify-between w-full'>
+      <div className='w-full mt-20 px-sectionPadding max-md:px-mobileScreenPadding pt-sectionPadding max-md:pt-mobileScreenPadding'>
+        <div className='flex justify-between w-full max-[930px]:flex-col'>
           {/* IMAGES */}
-          <div className='w-1/2 flex flex-col items-start'>
+          <div className='w-2/3 max-[930px]:w-3/4 max-sm:w-full flex flex-col items-start'>
             <div className='w-full bg-gray-200'>
               <img src={img1} alt="" />
             </div>
@@ -67,16 +66,16 @@ const SingleProductDetail = () => {
 
 
 
-          <div className='flex flex-col items-start justify-center w-1/2 ml-20'>
-            <p className='text-5xl font-semibold font-texts'>H&M White Hoodie</p>
-            <p className='text-3xl font-semibold font-headings my-1'>₹1599</p>
-            <p className='text-base font-semibold font-texts'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, neque cum corrupti ad consectetur recusandae numquam? Exercitationem placeat fugit a deserunt nemo enim repellendus cupiditate? Ex vero nemo officia optio.
+          <div className='flex flex-col items-start justify-center w-2/5 max-[930px]:w-full min-[930px]:ml-20'>
+            <p className='text-5xl max-mobileL:text-3xl font-semibold font-texts'>H&M White Hoodie</p>
+            <p className='text-3xl max-mobileL:text-xl max-mobileL: font-semibold font-headings my-1'>₹1599</p>
+            <p className='text-base max-mobileL:text-sm font-semibold font-texts'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, neque cum corrupti ad consectetur recusandae numquam? Exercitationem placeat fugit a deserunt nemo enim repellendus cupiditate? Ex vero nemo officia optio.
             Nobis impedit ratione, rem maxime iusto ipsum id velit est voluptatum odio eveniet qui </p>
             
             {/* SIZES SECTION */}
             <div className='w-full my-6'>
               <p className='font-texts font-semibold text-2xl mb-2'>Sizes:</p>
-              <div className='grid grid-cols-4 gap-x-10 gap-y-3'>
+              <div className='grid grid-cols-4 gap-x-10 max-sm:gap-x-5 max-mobileL:gap-x-2 gap-y-3'>
                 {
                   sizes.map((size)=>(
                     <div className={selectedSize==size.id?'flex justify-center items-center border border-typography p-2 cursor-pointer duration-200 ease-linear bg-primary text-background':'flex justify-center items-center text-black border border-typography p-2 cursor-pointer duration-200 ease-linear'} value={size.size} key={size.id} onClick={()=>{setSelectedSize(size.id)}}>

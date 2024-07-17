@@ -3,7 +3,7 @@ import OrderedProds from './OrderedProds'
 import { Link } from 'react-router-dom'
 
 const Orders = () => {
-    const [hasOrdered, setHasOrdered]= useState(false)
+    const [hasOrdered, setHasOrdered]= useState(true)
   return (
     <div className='mt-20 px-sectionPadding pt-10 '>
         {
