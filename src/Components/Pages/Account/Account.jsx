@@ -27,37 +27,20 @@ const Account = () => {
                       <p className='text-sm '>View, Track and Return your orders here</p>
                     </div>
                   </Link>
-                  {/* -------------------ACCOUNT DETAILS ------------------ */}
-                  <div className='  px-4 py-6 border border-typography flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
+                  {/* -------------------ACCOUNT DETAILS ------------------ */}                 
+                  <Link to='/account/account-details' className='  px-4 py-6 border border-typography flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
                     <img src={account} className='h-28 max-mobileM:h-24 p-2'/>
                     <div className='h-full flex flex-col justify-center items-start py-6 '>
                       <p className='text-xl font-bold'>Account Details</p>
-                      <p className='text-sm '>View, Track and Return your orders here</p>
+                      <p className='text-sm '>Get your account details here</p>
                     </div>
-                  </div>
-                  {/* ------------------- PAYMENT OPTIONS ------------------ */}
-                  <div className=' px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
-                    <img src={payment} className='h-28 max-mobileM:h-24 p-2'/>
-                    <div className='h-full flex flex-col justify-center items-start py-6 '>
-                      <p className='text-xl font-bold'>Payment Options</p>
-                      <p className='text-sm '>View, Track and Return your orders here</p>
-                    </div>
-                  </div>
-                  
+                  </Link>
                   {/* ------------------- ADDRESSES ------------------ */}
                   <div className='  px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
                     <img src={address} className='h-28 max-mobileM:h-24 p-2 '/>
                     <div className='h-full flex flex-col justify-center items-start py-6 '>
                       <p className='text-xl font-bold'>Addresses</p>
                       <p className='text-sm '>View and Edit addresses for orders and gifts</p>
-                    </div>
-                  </div>
-                  {/* ------------------- CUSTOMER CARE ------------------ */}
-                  <div className=' px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
-                    <img src={contactus} className='h-28 max-mobileM:h-24 p-2'/>
-                    <div className='h-full flex flex-col justify-center items-start py-6'>
-                      <p className='text-xl font-bold'>Contact us</p>
-                      <p className='text-sm '>Contact for hlep or customer care</p>
                     </div>
                   </div>
                 </div>

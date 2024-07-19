@@ -11,6 +11,7 @@ import Account from './Components/Pages/Account/Account.jsx'
 import Cart from './Components/Pages/Cart/Cart.jsx'
 import Orders from './Components/Pages/Account/Orders/Orders.jsx'
 import SingleProductDetail from './Components/Pages/Shop/SingleProductDetail.jsx'
+import AccDetails from './Components/Pages/Account/Details/AccDetails.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/account' element={<Account/>}/>
           <Route path='/account/my-orders' element={<Orders/>}/>
+          <Route path='/account/account-details' element={<AccDetails/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/shop/:prodID' element={<SingleProductDetail/>}/>
         </Route>
