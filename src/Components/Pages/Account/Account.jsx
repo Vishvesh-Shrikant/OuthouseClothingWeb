@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import orders from '../../../assets/Orders.jpg'
 import address from '../../../assets/address.png'
 import account from '../../../assets/account.png'
+import admin from '../../../assets/Admin.png'
 import ScrollToTop from '../../../ScrollToTop'
 import { Link } from 'react-router-dom'
 import SignInPage from '../SignIn/SignInPage'
@@ -11,6 +12,7 @@ import SignInPage from '../SignIn/SignInPage'
 
 const Account = () => {
   const [loggedin, setLoggedin] = useState(true)
+  const [adminLogin, setAdminLogin]=useState(true)
   return (
     <>
         <ScrollToTop/>
@@ -28,7 +30,7 @@ const Account = () => {
                   <p className='text-4xl max-mobileM:text-3xl font-headings text-black font-semibold'>YOUR ACCOUNT</p>
                   {/* ------------------- YOUR ORDERS ------------------ */}
                   <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between my-10 gap-10 '>
-                    <Link to='/account/my-orders' className=' px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
+                    <Link to='/account/my-orders' className=' px-4 py-6 border border-typography flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
                       <img src={orders} className='h-28 max-mobileM:h-24 p-2'/>
                       <div className='h-full flex flex-col justify-center items-start py-6 '>
                         <p className='text-xl font-bold'>Your Orders</p>
@@ -51,6 +53,18 @@ const Account = () => {
                         <p className='text-sm '>View and Edit addresses for orders and gifts</p>
                       </div>
                     </div>
+                    {
+                      adminLogin&&
+                      (
+                        <Link to='/account/admin' className='px-4 py-6 border border-typography  flex justify-between items-center font-texts font-semibold rounded-md cursor-pointer hover:bg-gray-400/10 max-sm:w-3/4 max-[470px]:w-full'>
+                          <img src={admin} className='h-28 max-mobileM:h-24 p-2 '/>
+                          <div className='h-full flex flex-col justify-center items-start py-6 '>
+                            <p className='text-xl font-bold'>ADMIN</p>
+                            <p className='text-sm'>All information and details here</p>
+                          </div>
+                        </Link>
+                      )
+                    }
                   </div>
                 </div>
             </div>

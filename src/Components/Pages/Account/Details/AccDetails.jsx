@@ -45,22 +45,22 @@ const AccDetails = () => {
         <div className='flex justify-between items-center max-sm:w-full max-sm:flex-col my-5'>
           <div className='flex flex-col justify-center items-start w-full max-sm:my-2'>
               <p className='text-xl font-semibold mr-1'>First Name:</p>
-              <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-5/6 max-sm:w-full'/>
+              <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-5/6 max-sm:w-full' type='text'/>
           </div>
           <div className='flex flex-col justify-center items-start w-full max-sm:my-2'>
               <p className='text-xl font-semibold mr-1'>Last Name:</p>
-              <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-5/6 max-sm:w-full'/>
+              <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-5/6 max-sm:w-full' type='text'/>
           </div>
         </div>
         {/*EMAIL ADDRESS */}
         <div className='flex flex-col justify-center items-start w-1/2 max-sm:w-full my-5'>
           <p className='text-xl font-semibold mr-1'>E-mail address:</p>
-          <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-full'/>
+          <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-full' type='text'/>
         </div>
         {/*PHONE NUMBER */}
         <div className='flex flex-col justify-center items-start w-1/2 max-sm:w-full my-5'>
           <p className='text-xl font-semibold mr-1'>Phone Number:</p>
-          <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-full'/>
+          <input className='border border-typography outline-none font-semibold p-1 text-lg rounded w-full' type='text'/>
         </div>
       </div>
       {/* CHANGE PASSWORD */}
